@@ -3,7 +3,7 @@ Terraform configuration that sets up an AWS Auto Scaling Group (ASG) with dynami
 This example provides a basic setup for autoscaling based on CPU utilization using Terraform. Adjustments and enhancements can be made based on your specific requirements and infrastructure.
 
 
-The graph starts with the aws_provider resource which defines the AWS region.
+The graph starts with the aws_provider resource which defines the AWS region. \n
 It connects to the aws_vpc resource that represents the Virtual Private Cloud (VPC).
 The VPC connects to the aws_igw resource which is the Internet Gateway.
 A aws_subnet is created within the VPC.
@@ -22,7 +22,7 @@ Finally, two aws_autoscaling_policy resources are defined:
 scale-out-policy: This policy adds one instance to the autoscaling group when the high CPU utilization alarm is triggered.
 scale-in-policy: This policy removes one instance from the autoscaling group when the low CPU utilization alarm is triggered.
 
-Define Requirements:
+# Define Requirements:
 Autoscale based on CPU utilization.
 Scale out if CPU utilization is above 70% for 2 consecutive periods of 5 minutes.
 Scale in if CPU utilization is below 30% for 2 consecutive periods of 5 minutes.
@@ -30,10 +30,10 @@ Use t2.micro instances for the ASG.
 Use an Application Load Balancer (ALB) to distribute traffic to instances.
 
 
-Note: Replace placeholder values like ami-123456 with actual values.
+# Note: Replace placeholder values like ami-123456 with actual values.
 
-Deploy Infrastructure:
+# Deploy Infrastructure:
 Run terraform init and terraform apply to create the infrastructure.
 
-Testing:
+# Testing:
 Monitor the ASG and ALB in the AWS Management Console. You can generate load on the instances to trigger the scaling actions and observe the behavior.
