@@ -1,4 +1,4 @@
-# Auto-Scaling-Group-ASG-
+# Auto-Scaling-Group-ASG
 Terraform configuration that sets up an AWS Auto Scaling Group (ASG) with dynamic scaling policies based on CPU utilization. We'll use a custom metric alarm to trigger the scaling actions.
 This example provides a basic setup for autoscaling based on CPU utilization using Terraform. Adjustments and enhancements can be made based on your specific requirements and infrastructure.
 
